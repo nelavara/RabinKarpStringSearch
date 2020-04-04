@@ -66,9 +66,10 @@ void RabinKarpMatcher(string rabinIn, string comparison, int d, int q) {
 		if (p == t){
 			int j;
 			for (j = 0; j < m; j++) {
-				if (rabinIn[s + j] != comparison[j])
+				if (rabinIn[s + j] != comparison[j]){
 					spuriousHit = true;
 					break;
+				}
 			}
 			if (!spuriousHit) {
 				cout << "Match found starting at index " << s << endl;
